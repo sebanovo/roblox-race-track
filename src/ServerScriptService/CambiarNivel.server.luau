@@ -1,8 +1,8 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ServerStorage = game:GetService("ServerStorage")
 local Workspace = game:GetService("Workspace")
 local ChangeLevel = ReplicatedStorage:WaitForChild("CambiarNivelEvent")
 
-local Destruibles = ReplicatedStorage.Destruibles
 local niveles = require(ReplicatedStorage.Niveles)
 
 local carpetaNivelActual = nil
@@ -29,6 +29,7 @@ ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 	carpetaNivelActual.Name = nivelEncontrado.nombre
 	carpetaNivelActual.Parent = Workspace
 
+	local Destruibles = ServerStorage:FindFirstChild("Destruibles")
 	for _, objeto in ipairs(nivelEncontrado.pista.destruibles) do
 		local destruible = Destruibles:FindFirstChild(objeto.tipo .. "-" .. objeto.color)
 
@@ -46,7 +47,7 @@ ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 		clon.Parent = carpetaNivelActual
 	end
 
-	local goKart = ReplicatedStorage:WaitForChild("Go-Karts"):FindFirstChild("Go-Kart")
+	local goKart = ServerStorage:WaitForChild("Go-Karts"):FindFirstChild("Go-Kart")
 	if not goKart then
 		error ("No se encontro el goKart")
 	end
@@ -65,7 +66,7 @@ ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 		nivelEncontrado.vehiculo.posicion.Z
 	))
 
-	local pista = ReplicatedStorage:WaitForChild("Pistas"):FindFirstChild(nivelEncontrado.pista.nombre)
+	local pista = ServerStorage:WaitForChild("Pistas"):FindFirstChild(nivelEncontrado.pista.nombre)
 
 	if not pista  then
 		error("No se encontró la pista: " .. nivelEncontrado.pista.nombre)
