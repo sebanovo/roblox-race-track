@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local CollectionService = game:GetService("CollectionService")
-local IncrementPuntos = game:GetService("ReplicatedStorage"):WaitForChild("IncrementPuntos")
+local IncrementPuntos = game:GetService("ReplicatedStorage"):WaitForChild("IncrementarPuntosEvent")
 
 local player = Players.LocalPlayer
 local distanciaEnStuds = 15

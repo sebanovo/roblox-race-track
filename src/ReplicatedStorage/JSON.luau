@@ -26,7 +26,7 @@ local JSON = [[
       },
       "pista": {
         "id": 1,
-        "nombre": "Pista1",
+        "nombre": "PistaCuadrado",
         "posicion": {
           "X": 19.162,
           "Y": 6.93,
@@ -264,7 +264,7 @@ local JSON = [[
       },
       "pista": {
         "id": 1,
-        "nombre": "PistaCircle",
+        "nombre": "PistaCirculo",
         "posicion": {
           "X": 19.162,
           "Y": 16.418,

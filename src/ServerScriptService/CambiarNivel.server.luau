@@ -1,12 +1,11 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
-
-local ChangeLevel = ReplicatedStorage.ChangeLevel
+local ChangeLevel = ReplicatedStorage:WaitForChild("CambiarNivelEvent")
 
 local Destruibles = ReplicatedStorage.Destruibles
 local niveles = require(ReplicatedStorage.Niveles)
 
-local carpetaNivelActual
+local carpetaNivelActual = nil
 
 ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 	if carpetaNivelActual then
