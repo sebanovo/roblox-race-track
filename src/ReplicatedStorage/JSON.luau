@@ -769,5 +769,4 @@ local JSON = [[
 }
 ]]
 
-
 return JSON

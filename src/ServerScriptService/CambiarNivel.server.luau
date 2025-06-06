@@ -60,11 +60,11 @@ ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 	goKartClon.Name = "Go-Kart"
 	goKartClon.Parent = carpetaNivelActual
 
-	goKartClon:SetPrimaryPartCFrame(CFrame.new(
+	goKartClon:PivotTo(CFrame.new(
 		nivelEncontrado.vehiculo.posicion.X,
 		nivelEncontrado.vehiculo.posicion.Y,
 		nivelEncontrado.vehiculo.posicion.Z
-		))
+	))
 
 	local pista = ReplicatedStorage:WaitForChild("Pistas"):FindFirstChild(nivelEncontrado.pista.nombre)
 
@@ -77,7 +77,7 @@ ChangeLevel.OnServerEvent:Connect(function(player, levelName)
 		nivelEncontrado.pista.posicion.X,
 		nivelEncontrado.pista.posicion.Y,
 		nivelEncontrado.pista.posicion.Z
-		))
+	))
 	pistaClon.Parent = carpetaNivelActual
 
 	local character = player.Character
