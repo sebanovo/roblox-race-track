@@ -1,7 +1,8 @@
 -- game.Players.SebastianCR000.leaderstats.Puntos.Value = 100
 local DataStoreService = game:GetService("DataStoreService")
 local db = DataStoreService:GetDataStore("data")
-local MAXIMO_INTENTOS = 10
+
+local TOTAL_MAX_INTENTOS = 10
 
 function playerAdded(player: Player)
 	local leaderStats = Instance.new("Folder")
@@ -16,7 +17,7 @@ function playerAdded(player: Player)
 	local intento = 0
 
 	while not succes do
-		if intento >= MAXIMO_INTENTOS then
+		if intento >= TOTAL_MAX_INTENTOS then
 			error("No se pudo obtener los datos del jugador")
 		end
 		succes, data = pcall(db.GetAsync, db, player.UserId)
@@ -27,7 +28,7 @@ function playerAdded(player: Player)
 		else 
 			warn("Fallo obtener dato intento: ", intento)
 			intento += 1
-			wait(2)
+			task.wait(2)
 		end
 	end 
 end
@@ -40,7 +41,7 @@ function playerRemoving(player)
 	local intento = 0
 
 	while not succes do
-		if intento >= MAXIMO_INTENTOS then
+		if intento >= TOTAL_MAX_INTENTOS then
 			error("No se pudo guardar los datos del jugador")
 		end
 
@@ -51,10 +52,10 @@ function playerRemoving(player)
 		end)
 		if succes then
 			print("Datos guardados con exito")
-		else 
+		else
 			warn("Fallo al guardar datos intento: ", intento)
 			intento += 1
-			wait(2)
+			task.wait(2)
 		end
 	end
 end
