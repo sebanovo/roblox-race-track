@@ -3,43 +3,36 @@
   "tree": {
     "$className": "DataModel",
     "$ignoreUnknownInstances": true,
-
     "ReplicatedFirst": {
       "$ignoreUnknownInstances": true,
       "$className": "ReplicatedFirst",
       "$path": "src/ReplicatedFirst"
     },
-
     "ReplicatedStorage": {
       "$ignoreUnknownInstances": true,
       "$className": "ReplicatedStorage",
       "$path": "src/ReplicatedStorage"
     },
-
     "ServerScriptService": {
       "$ignoreUnknownInstances": true,
       "$className": "ServerScriptService",
       "$path": "src/ServerScriptService"
     },
-
     "ServerStorage": {
       "$ignoreUnknownInstances": true,
       "$className": "ServerStorage",
       "$path": "src/ServerStorage"
     },
-
     "StarterGui": {
       "$ignoreUnknownInstances": true,
       "$className": "StarterGui",
       "$path": "src/StarterGui"
     },
-
     "StarterPack": {
       "$ignoreUnknownInstances": true,
       "$className": "StarterPack",
       "$path": "src/StarterPack"
     },
-
     "StarterPlayer": {
       "$ignoreUnknownInstances": true,
       "$className": "StarterPlayer",

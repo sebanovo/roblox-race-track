@@ -13,11 +13,11 @@ RunService.RenderStepped:Connect(function()
 	local character = player.Character
 	if not character then return end
 
-	local torso = character:FindFirstChild("HumanoidRootPart")
-	if not torso then return end
+	local cabeza = character:FindFirstChild("Head")
+	if not cabeza then return end
 
-	local origen = torso.Position
-	local direccion = torso.CFrame.LookVector
+	local origen = cabeza.Position
+	local direccion = cabeza.CFrame.LookVector
 
 	-- Obtener todas las partes etiquetadas
 	local manzanasRojas = CollectionService:GetTagged("manzana-roja")
