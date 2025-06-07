@@ -5,11 +5,11 @@ local db = DataStoreService:GetDataStore("data")
 function playerAdded(player: Player)
 	local leaderStats = Instance.new("Folder")
 	leaderStats.Name = "leaderstats"
-  leaderStats.Parent = player
+	leaderStats.Parent = player
 
 	local puntos = Instance.new("IntValue")
 	puntos.Name = "Puntos"
-  puntos.Parent = leaderStats
+	puntos.Parent = leaderStats
 
 	local succes, data = nil, nil
 	local intento = 0

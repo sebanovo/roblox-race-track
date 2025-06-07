@@ -1,7 +1,10 @@
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local CollectionService = game:GetService("CollectionService")
-local IncrementPuntos = game:GetService("ReplicatedStorage"):WaitForChild("IncrementarPuntosEvent")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local IncrementarPuntosEvent = ReplicatedStorage:WaitForChild("IncrementarPuntosEvent")
+local DestruirManzanasEvent = ReplicatedStorage:WaitForChild("DestruirManzanas")
 
 local player = Players.LocalPlayer
 local distanciaEnStuds = 15
@@ -40,24 +43,12 @@ RunService.RenderStepped:Connect(function()
 	
 	local parte = rayo.Instance
 	if parte and parte:IsA("BasePart") and not parte:FindFirstChild("Exploded") then
-		-- Marcar como explotado
-		local tag = Instance.new("BoolValue")
-		tag.Name = "Exploded"
-		tag.Parent = parte
-
-		-- Crear explosión
-		local explosion = Instance.new("Explosion")
-		explosion.Position = parte.Position
-		explosion.BlastRadius = 5
-		explosion.BlastPressure = 500000
-		explosion.Parent = workspace
-		
 		if CollectionService:HasTag(parte, "manzana-roja") then
-			IncrementPuntos:FireServer(10)
+			IncrementarPuntosEvent:FireServer(10)
 		end
 		if CollectionService:HasTag(parte, "manzana-verde") then
-			IncrementPuntos:FireServer(20)
+			IncrementarPuntosEvent:FireServer(20)
 		end
-		parte:Destroy()
+		DestruirManzanasEvent:FireServer(parte);
 	end
 end)
