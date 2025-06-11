@@ -29,14 +29,14 @@ function cambiarNivel(player: Player, levelName: string)
 
 	local Destruibles = ServerStorage:FindFirstChild("Destruibles")
 	for _, objeto in ipairs(nivelEncontrado.pista.destruibles) do
-		local destruible = Destruibles:FindFirstChild(objeto.tipo .. "-" .. objeto.color)
+		local destruible = Destruibles:FindFirstChild(objeto.nombre)
 
 		if not destruible then
-			error("No se encontró el modelo para el color: " .. objeto.color) 
+			error("No se encontró el modelo para el color: " .. objeto.color)
 		end
 
 		local clon = destruible:Clone()
-		clon.Name = objeto.tipo .. "-" .. objeto.color
+		clon.Name = objeto.nombre
 		clon.CFrame = CFrame.new(
 			objeto.posicion.X,
 			objeto.posicion.Y,

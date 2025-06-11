@@ -1,8 +1,8 @@
 --local CollectionService = game.CollectionService
 ---- Add a tag
 
---local manzanasRojas = CollectionService:GetTagged("manzana-roja")
---local manzanasVerdes = CollectionService:GetTagged("manzana-verde")
+--local manzanasRojas = CollectionService:GetTagged("ManzanaRoja")
+--local manzanasVerdes = CollectionService:GetTagged("ManzanaVerde")
 
 --local destruibles = {}
 --local id = 1

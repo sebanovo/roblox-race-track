@@ -35,8 +35,7 @@ local JSON = [[
         "destruibles": [
           {
             "id": 1,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -261.85577392578125,
@@ -46,8 +45,7 @@ local JSON = [[
           },
           {
             "id": 2,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -270.10443115234375,
@@ -57,8 +55,7 @@ local JSON = [[
           },
           {
             "id": 3,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -261.85577392578125,
@@ -68,8 +65,7 @@ local JSON = [[
           },
           {
             "id": 4,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": 126.97386169433594,
@@ -79,8 +75,7 @@ local JSON = [[
           },
           {
             "id": 5,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": 314.5657653808594,
@@ -90,8 +85,7 @@ local JSON = [[
           },
           {
             "id": 6,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": 314.5657653808594,
@@ -101,8 +95,7 @@ local JSON = [[
           },
           {
             "id": 7,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -13.646484375,
@@ -112,8 +105,7 @@ local JSON = [[
           },
           {
             "id": 8,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -270.10443115234375,
@@ -123,8 +115,7 @@ local JSON = [[
           },
           {
             "id": 9,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": -102.21490478515625,
@@ -134,8 +125,7 @@ local JSON = [[
           },
           {
             "id": 10,
-            "tipo": "manzana",
-            "color": "roja",
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "X": 314.5657653808594,
@@ -145,8 +135,7 @@ local JSON = [[
           },
           {
             "id": 11,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": -297.446044921875,
@@ -156,8 +145,7 @@ local JSON = [[
           },
           {
             "id": 12,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 302.6910095214844,
@@ -167,8 +155,7 @@ local JSON = [[
           },
           {
             "id": 13,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 225.75375366210938,
@@ -178,8 +165,7 @@ local JSON = [[
           },
           {
             "id": 14,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 301.5210266113281,
@@ -189,8 +175,7 @@ local JSON = [[
           },
           {
             "id": 15,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 32.43653106689453,
@@ -200,8 +185,7 @@ local JSON = [[
           },
           {
             "id": 16,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": -262.06488037109375,
@@ -211,8 +195,7 @@ local JSON = [[
           },
           {
             "id": 17,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 34.64979553222656,
@@ -222,8 +205,7 @@ local JSON = [[
           },
           {
             "id": 18,
-            "tipo": "manzana",
-            "color": "verde",
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "X": 320.4449768066406,
@@ -272,224 +254,204 @@ local JSON = [[
         },
         "destruibles": [
           {
-            "tipo": "manzana",
             "id": 1,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 130.4133758544922,
               "Z": 207.7665252685547
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 2,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -75.27932739257812,
               "Z": 113.2122802734375
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 3,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 7.114245891571045,
               "X": 314.5657653808594,
               "Z": 68.6832275390625
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 4,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -69.89653015136719,
               "Z": 219.77589416503906
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 5,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 349.47406005859375,
               "Z": -12.669426918029785
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 6,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 275.93798828125,
               "Z": 108.82609558105469
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 7,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 210.58230590820312,
               "Z": 191.6373748779297
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 8,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -200.1829376220703,
               "Z": 5.111240386962891
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 9,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -257.07470703125,
               "Z": -140.8541259765625
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 10,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -264.0339050292969,
               "Z": 68.35111999511719
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 11,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 224.83592224121094,
               "Z": -213.68763732910156
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 12,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 249.9412384033203,
               "Z": -262.11773681640625
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 13,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -133.3262176513672,
               "Z": -376.8604431152344
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 14,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -28.4757022857666,
               "Z": -405.91876220703125
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 15,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 9.322145462036133,
               "X": -262.06488037109375,
               "Z": -488.2876281738281
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 16,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 118.14208221435547,
               "Z": -311.2996520996094
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 17,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148787498474121,
               "X": 10.647466659545898,
               "Z": -349.8865051269531
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 18,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -224.20440673828125,
               "Z": -264.0470275878906
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 19,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 291.54595947265625,
               "Z": -111.44084167480469
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 20,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -107.56655883789062,
               "Z": -292.4905090332031
-            },
-            "color": "verde"
+            }
           }
         ]
       }
@@ -532,235 +494,214 @@ local JSON = [[
         },
         "destruibles": [
           {
-            "tipo": "manzana",
             "id": 1,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 46.14241027832031,
               "X": -24.126571655273438,
               "Z": -165.5281524658203
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 2,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 46.14241409301758,
               "X": -141.42208862304688,
               "Z": -295.8401794433594
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 3,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 7.114245891571045,
               "X": 314.5657653808594,
               "Z": 68.6832275390625
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 4,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 76.24420928955078,
               "X": 98.10675048828125,
               "Z": 363.143310546875
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 5,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 76.24420928955078,
               "X": -144.42904663085938,
               "Z": 80.09098815917969
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 6,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 52.27989959716797,
               "X": 103.89898681640625,
               "Z": 5.53948974609375
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 7,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 46.14241027832031,
               "X": 194.6345672607422,
               "Z": -225.13372802734375
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 8,
+            "nombre": "ManzanaRoja",
             "valor": 10,
             "posicion": {
               "Y": 46.14241027832031,
               "X": 198.5557861328125,
               "Z": -495.6605224609375
-            },
-            "color": "roja"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 9,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 69.85508728027344,
               "Z": -128.16880798339844
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 10,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": -98.10459899902344,
               "Z": 17.010467529296875
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 11,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 9.322145462036133,
               "X": -262.06488037109375,
               "Z": -488.2876281738281
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 12,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 65.64657592773438,
               "X": 127.3112564086914,
               "Z": -178.96359252929688
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 13,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 48.350311279296875,
               "X": 103.12300109863281,
               "Z": -594.9408569335938
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 14,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 48.350311279296875,
               "X": -93.12914276123047,
               "Z": -486.83575439453125
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 15,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": -199.6655731201172,
               "Z": 248.0411376953125
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 16,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 48.350311279296875,
               "X": -164.03860473632812,
               "Z": -382.5036926269531
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 17,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 205.00668334960938,
               "Z": 248.08766174316406
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 18,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 3.5896453857421875,
               "Z": 424.1588134765625
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 19,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 27.28516387939453,
               "Z": -68.8802719116211
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 20,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 48.350311279296875,
               "X": 251.44058227539062,
               "Z": -332.9773254394531
-            },
-            "color": "verde"
+            }
           },
           {
-            "tipo": "manzana",
             "id": 21,
+            "nombre": "ManzanaVerde",
             "valor": 20,
             "posicion": {
               "Y": 62.58372497558594,
               "X": 101.39055633544922,
               "Z": 37.47254943847656
-            },
-            "color": "verde"
+            }
           }
         ]
       }
