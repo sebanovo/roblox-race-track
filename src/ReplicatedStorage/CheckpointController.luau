@@ -35,7 +35,6 @@ function iniciarCheckpoints()
 		local progreso = progresoJugadores[jugador] or 0
 		local siguienteCheckpoint = progreso + 1
 
-		print(#listaCheckpoints)
 		if siguienteCheckpoint > #listaCheckpoints then
 			print(jugador.Name .. " ha completado toda la pista")
 			cambiarNivel(jugador, niveles[2].nombre)

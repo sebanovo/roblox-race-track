@@ -32,17 +32,19 @@ function cambiarNivel(player: Player, levelName: string)
 		local destruible = Destruibles:FindFirstChild(objeto.nombre)
 
 		if not destruible then
-			error("No se encontró el modelo para el color: " .. objeto.color)
+			error("No se encontró el modelo para el destruible: " .. objeto.nombre)
 		end
 
-		local clon = destruible:Clone()
-		clon.Name = objeto.nombre
-		clon.CFrame = CFrame.new(
+		local destruibleClon = destruible:Clone()
+		destruibleClon.Name = objeto.nombre
+		destruibleClon.Punto.Value = objeto.valor
+		destruibleClon.CFrame = CFrame.new(
 			objeto.posicion.X,
 			objeto.posicion.Y,
 			objeto.posicion.Z
 		)
-		clon.Parent = carpetaNivelActual
+
+		destruibleClon.Parent = carpetaNivelActual
 	end
 
 	local goKart = ServerStorage:WaitForChild("Go-Karts"):FindFirstChild("Go-Kart")

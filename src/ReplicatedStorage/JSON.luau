@@ -255,8 +255,8 @@ local JSON = [[
         "destruibles": [
           {
             "id": 1,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 130.4133758544922,
@@ -265,8 +265,8 @@ local JSON = [[
           },
           {
             "id": 2,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -75.27932739257812,
@@ -275,8 +275,8 @@ local JSON = [[
           },
           {
             "id": 3,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 7.114245891571045,
               "X": 314.5657653808594,
@@ -285,8 +285,8 @@ local JSON = [[
           },
           {
             "id": 4,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -69.89653015136719,
@@ -295,8 +295,8 @@ local JSON = [[
           },
           {
             "id": 5,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 349.47406005859375,
@@ -305,8 +305,8 @@ local JSON = [[
           },
           {
             "id": 6,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 275.93798828125,
@@ -315,8 +315,8 @@ local JSON = [[
           },
           {
             "id": 7,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 210.58230590820312,
@@ -325,8 +325,8 @@ local JSON = [[
           },
           {
             "id": 8,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -200.1829376220703,
@@ -335,8 +335,8 @@ local JSON = [[
           },
           {
             "id": 9,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -257.07470703125,
@@ -345,8 +345,8 @@ local JSON = [[
           },
           {
             "id": 10,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": -264.0339050292969,
@@ -355,8 +355,8 @@ local JSON = [[
           },
           {
             "id": 11,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 12.940889358520508,
               "X": 224.83592224121094,
@@ -365,8 +365,8 @@ local JSON = [[
           },
           {
             "id": 12,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 249.9412384033203,
@@ -375,8 +375,8 @@ local JSON = [[
           },
           {
             "id": 13,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -133.3262176513672,
@@ -385,8 +385,8 @@ local JSON = [[
           },
           {
             "id": 14,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -28.4757022857666,
@@ -395,8 +395,8 @@ local JSON = [[
           },
           {
             "id": 15,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 9.322145462036133,
               "X": -262.06488037109375,
@@ -405,8 +405,8 @@ local JSON = [[
           },
           {
             "id": 16,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 118.14208221435547,
@@ -415,8 +415,8 @@ local JSON = [[
           },
           {
             "id": 17,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148787498474121,
               "X": 10.647466659545898,
@@ -425,8 +425,8 @@ local JSON = [[
           },
           {
             "id": 18,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -224.20440673828125,
@@ -435,8 +435,8 @@ local JSON = [[
           },
           {
             "id": 19,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": 291.54595947265625,
@@ -445,8 +445,8 @@ local JSON = [[
           },
           {
             "id": 20,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "UvaMorada",
+            "valor": 30,
             "posicion": {
               "Y": 15.148788452148438,
               "X": -107.56655883789062,
@@ -495,8 +495,8 @@ local JSON = [[
         "destruibles": [
           {
             "id": 1,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 46.14241027832031,
               "X": -24.126571655273438,
@@ -505,8 +505,8 @@ local JSON = [[
           },
           {
             "id": 2,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 46.14241409301758,
               "X": -141.42208862304688,
@@ -515,8 +515,8 @@ local JSON = [[
           },
           {
             "id": 3,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 7.114245891571045,
               "X": 314.5657653808594,
@@ -525,8 +525,8 @@ local JSON = [[
           },
           {
             "id": 4,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 76.24420928955078,
               "X": 98.10675048828125,
@@ -535,8 +535,8 @@ local JSON = [[
           },
           {
             "id": 5,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 76.24420928955078,
               "X": -144.42904663085938,
@@ -545,8 +545,8 @@ local JSON = [[
           },
           {
             "id": 6,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 52.27989959716797,
               "X": 103.89898681640625,
@@ -555,8 +555,8 @@ local JSON = [[
           },
           {
             "id": 7,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 46.14241027832031,
               "X": 194.6345672607422,
@@ -565,8 +565,8 @@ local JSON = [[
           },
           {
             "id": 8,
-            "nombre": "ManzanaRoja",
-            "valor": 10,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 46.14241027832031,
               "X": 198.5557861328125,
@@ -575,8 +575,8 @@ local JSON = [[
           },
           {
             "id": 9,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 69.85508728027344,
@@ -585,8 +585,8 @@ local JSON = [[
           },
           {
             "id": 10,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": -98.10459899902344,
@@ -595,8 +595,8 @@ local JSON = [[
           },
           {
             "id": 11,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 9.322145462036133,
               "X": -262.06488037109375,
@@ -605,8 +605,8 @@ local JSON = [[
           },
           {
             "id": 12,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 65.64657592773438,
               "X": 127.3112564086914,
@@ -615,8 +615,8 @@ local JSON = [[
           },
           {
             "id": 13,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 48.350311279296875,
               "X": 103.12300109863281,
@@ -625,8 +625,8 @@ local JSON = [[
           },
           {
             "id": 14,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 48.350311279296875,
               "X": -93.12914276123047,
@@ -635,8 +635,8 @@ local JSON = [[
           },
           {
             "id": 15,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": -199.6655731201172,
@@ -645,8 +645,8 @@ local JSON = [[
           },
           {
             "id": 16,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 48.350311279296875,
               "X": -164.03860473632812,
@@ -655,8 +655,8 @@ local JSON = [[
           },
           {
             "id": 17,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 205.00668334960938,
@@ -665,8 +665,8 @@ local JSON = [[
           },
           {
             "id": 18,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 3.5896453857421875,
@@ -675,8 +675,8 @@ local JSON = [[
           },
           {
             "id": 19,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 78.45211029052734,
               "X": 27.28516387939453,
@@ -685,8 +685,8 @@ local JSON = [[
           },
           {
             "id": 20,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 48.350311279296875,
               "X": 251.44058227539062,
@@ -695,8 +695,8 @@ local JSON = [[
           },
           {
             "id": 21,
-            "nombre": "ManzanaVerde",
-            "valor": 20,
+            "nombre": "PeraVerde",
+            "valor": 40,
             "posicion": {
               "Y": 62.58372497558594,
               "X": 101.39055633544922,
