@@ -1,8 +1,8 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local IncrementPuntos = ReplicatedStorage:WaitForChild("IncrementarPuntosEvent")
+local IncrementarPuntosEvent = ReplicatedStorage:WaitForChild("IncrementarPuntosEvent")
 
-IncrementPuntos.OnServerEvent:Connect(function(jugador, cantidad)
+IncrementarPuntosEvent.OnServerEvent:Connect(function(jugador, cantidad)
 	local leaderstats = jugador:FindFirstChild("leaderstats")
 	if not leaderstats then return end
 

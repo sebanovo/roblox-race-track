@@ -1,11 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local ChangeLevel = ReplicatedStorage:WaitForChild("CambiarNivelEvent")
-local iniciarCheckpoints = require(ReplicatedStorage.CheckpointController)
+local CambiarNivelEvent = ReplicatedStorage:WaitForChild("CambiarNivelEvent")
 local cambiarNivel = require(ReplicatedStorage.CambiarNivel)
 
-ChangeLevel.OnServerEvent:Connect(function(player, levelName)
-	cambiarNivel(player, levelName)
-	iniciarCheckpoints()
+CambiarNivelEvent.OnServerEvent:Connect(function(_, levelName)
+	cambiarNivel(levelName)
 end)
-
-
