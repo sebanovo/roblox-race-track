@@ -13,24 +13,30 @@ function playerAdded(player: Player)
 	puntos.Name = "Puntos"
 	puntos.Parent = leaderStats
 
-	local succes, data = nil, nil
+	local succes = false
 	local intento = 0
 
 	while not succes do
 		if intento >= TOTAL_MAX_INTENTOS then
-			error("No se pudo obtener los datos del jugador")
+			error("No se pudo eliminar los datos del jugador")
 		end
-		succes, data = pcall(db.GetAsync, db, player.UserId)
 
-		if succes then 
-			puntos.Value = data and data["Puntos"] or 0
-			print("Datos obtenidos con exito")
-		else 
-			warn("Fallo obtener dato intento: ", intento)
+		-- Intentamos eliminar los datos del jugador
+		succes = pcall(function()
+			db:RemoveAsync(player.UserId)
+		end)
+
+		if succes then
+			print("Datos eliminados con éxito")
+		else
+			warn("Fallo al eliminar datos. Intento: ", intento)
 			intento += 1
 			task.wait(2)
 		end
-	end 
+	end
+
+	-- Reiniciamos los valores a cero
+	puntos.Value = 0
 end
 
 function playerRemoving(player)
