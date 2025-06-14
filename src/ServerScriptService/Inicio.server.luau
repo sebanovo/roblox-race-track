@@ -2,12 +2,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local cambiarNivel = require(ReplicatedStorage.CambiarNivel)
 local niveles = require(ReplicatedStorage.Niveles)
 
-function init()
-	cambiarNivel(niveles[1].nombre)
-end
-
-init()
-
 local Players = game:GetService("Players")
 local ServerStorage = game:GetService("ServerStorage")
 
@@ -47,6 +41,7 @@ game.Players.PlayerAdded:Connect(function(jugador)
 		iniciarJugador(jugador)
 	end)
 	print("Jugadores añadidos")
+  cambiarNivel("Nivel 1")
 end)
 
 -- Configurar checkpoints para todas las pistas en Workspace
