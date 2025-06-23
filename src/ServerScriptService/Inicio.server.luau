@@ -1,6 +1,6 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local cambiarNivel = require(ReplicatedStorage.CambiarNivel)
-local niveles = require(ReplicatedStorage.Niveles)
+-- local niveles = require(ReplicatedStorage.Niveles)
 
 local Players = game:GetService("Players")
 local ServerStorage = game:GetService("ServerStorage")
@@ -43,6 +43,14 @@ game.Players.PlayerAdded:Connect(function(jugador)
 	print("Jugadores añadidos")
   cambiarNivel("Nivel 1")
 end)
+
+function desmontarJugador(jugador : Player)
+	local humanoide = jugador.Character:FindFirstChildOfClass("Humanoid")
+	if humanoide then
+		humanoide.Sit = false
+		task.wait(4)
+	end
+end
 
 -- Configurar checkpoints para todas las pistas en Workspace
 function configurarCheckpoints(folder)
@@ -99,6 +107,7 @@ function configurarCheckpoints(folder)
 												progreso.checkpointEsperado = 1
 												local nuevaPista = ordenPistas[progreso.pistaActualIndex]
 
+												desmontarJugador(jugador)	
 												if nuevaPista then
 													if nuevaPista == "PistaCuadrado" then
 														cambiarNivel("Nivel 1")
