@@ -48,7 +48,7 @@ function desmontarJugador(jugador : Player)
 	local humanoide = jugador.Character:FindFirstChildOfClass("Humanoid")
 	if humanoide then
 		humanoide.Sit = false
-		task.wait(4)
+		task.wait(0.1)
 	end
 end
 
