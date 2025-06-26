@@ -1,7 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local CambiarNivelEvent = ReplicatedStorage:WaitForChild("CambiarNivelEvent")
-local cambiarNivel = require(ReplicatedStorage.CambiarNivel)
+local CargarNivelEvent = ReplicatedStorage:WaitForChild("CargarNivelEvent")
+local cargarNivel = require(ReplicatedStorage.CargarNivel)
 
-CambiarNivelEvent.OnServerEvent:Connect(function(_, levelName)
-	cambiarNivel(levelName)
+CargarNivelEvent.OnServerEvent:Connect(function(_, levelName)
+	cargarNivel(levelName)
 end)

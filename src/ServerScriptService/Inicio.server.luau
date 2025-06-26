@@ -1,6 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local cambiarNivel = require(ReplicatedStorage.CambiarNivel)
--- local niveles = require(ReplicatedStorage.Niveles)
+local cargarNivel = require(ReplicatedStorage.CargarNivel)
+local evento = ReplicatedStorage:WaitForChild("MostrarPantallaCarga")
+local niveles = require(ReplicatedStorage.Niveles)
 
 local Players = game:GetService("Players")
 local ServerStorage = game:GetService("ServerStorage")
@@ -10,13 +11,6 @@ local ordenPistas = {"PistaCuadrado", "PistaCirculo", "Pista8"}
 
 -- Progreso de cada jugador
 local progresoJugadores = {}
-
-local function iniciarJugador(jugador)
-	progresoJugadores[jugador.UserId] = {
-		pistaActualIndex = 1,
-		checkpointEsperado = 1
-	}
-end
 
 local function getTotalCheckpoints(pistaNombre)
 	local pista = ServerStorage.Pistas:FindFirstChild(pistaNombre)
@@ -35,14 +29,6 @@ local function getTotalCheckpoints(pistaNombre)
 	return total
 end
 
-game.Players.PlayerAdded:Connect(function(jugador)
-	iniciarJugador(jugador)
-	jugador.CharacterAdded:Connect(function()
-		iniciarJugador(jugador)
-	end)
-	print("Jugadores añadidos")
-  cambiarNivel("Nivel 1")
-end)
 
 function desmontarJugador(jugador : Player)
 	local humanoide = jugador.Character:FindFirstChildOfClass("Humanoid")
@@ -50,6 +36,26 @@ function desmontarJugador(jugador : Player)
 		humanoide.Sit = false
 		task.wait(0.1)
 	end
+end
+
+function cambiarPosicion(player, posicion)
+	if not player.Character then
+		player.CharacterAdded:Wait()
+	end
+	local character = player.Character
+	local torso = character:WaitForChild("HumanoidRootPart")
+	if not torso then
+		warn("No se encontró HumanoidRootPart para "..player.Name)
+		player:LoadCharacter()
+	end
+
+	torso.CFrame = CFrame.new(
+		Vector3.new(
+			posicion.X,
+			posicion.Y,
+			posicion.Z
+		)
+	)
 end
 
 -- Configurar checkpoints para todas las pistas en Workspace
@@ -110,20 +116,29 @@ function configurarCheckpoints(folder)
 												desmontarJugador(jugador)	
 												if nuevaPista then
 													if nuevaPista == "PistaCuadrado" then
-														cambiarNivel("Nivel 1")
-														task.wait(1)
+														evento:FireClient(jugador, true)
+														cargarNivel("Nivel 1")
+														task.wait(3)
+														cambiarPosicion(jugador, niveles[1].jugador.posicion)
+														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
 														configurarCheckpoints("Nivel 1")
 													elseif nuevaPista == "PistaCirculo" then
-														cambiarNivel("Nivel 2")
-														task.wait(1) 
+														evento:FireClient(jugador, true)
+														cargarNivel("Nivel 2")
+														task.wait(3)
+														cambiarPosicion(jugador, niveles[2].jugador.posicion)
+														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
 														configurarCheckpoints("Nivel 2")
 													elseif nuevaPista == "Pista8" then
-														cambiarNivel("Nivel 3")
-														task.wait(1) 
+														evento:FireClient(jugador, true)
+														cargarNivel("Nivel 3")
+														task.wait(3)
+														cambiarPosicion(jugador, niveles[3].jugador.posicion)
+														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
 														configurarCheckpoints("Nivel 3")
@@ -154,4 +169,31 @@ function configurarCheckpoints(folder)
 	end
 end
 
-configurarCheckpoints("Nivel 1")
+local MAX_JUGADORES = 1
+local jugadoresListos = 0
+
+function iniciarJugador(jugador)
+	progresoJugadores[jugador.UserId] = {
+		pistaActualIndex = 1,
+		checkpointEsperado = 1
+	}
+	jugadoresListos += 1
+
+	if jugadoresListos == MAX_JUGADORES then
+		print("Todos los jugadores están listos. Iniciando juego.")
+		evento:FireClient(jugador, true)
+		task.wait(3)
+		cargarNivel("Nivel 1")
+		for _, player in ipairs(Players:GetPlayers()) do
+			cambiarPosicion(player, niveles[1].jugador.posicion)
+		end
+		evento:FireClient(jugador, false)
+		configurarCheckpoints("Nivel 1")
+	end
+end
+
+game.Players.PlayerAdded:Connect(function(jugador)
+	jugador.CharacterAdded:Connect(function()
+		iniciarJugador(jugador)
+	end)
+end)
