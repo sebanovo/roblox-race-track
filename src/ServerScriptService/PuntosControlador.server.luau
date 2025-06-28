@@ -47,15 +47,10 @@ function actualizarCampo(player: Player, campo: string, valor: any)
 	while not success and intentos < TOTAL_MAX_INTENTOS do
 		success = pcall(function()
 			local datos = db:GetAsync(player.UserId) or {}
-			if not datos["Puntos"] then
-				db:SetAsync(player.UserId, {Puntos = 0})	
-			end
-			if not datos["MejorPuntaje"] then
-				db:SetAsync(player.UserId, {MejorPuntaje= 0})	
-			end
-			if not datos["Posicion"] then
-				db:SetAsync(player.UserId, {Posicion = {x = 0, y = 0, z = 0}})
-			end
+			datos.Puntos = datos.Puntos or 0
+			datos.MejorPuntaje = datos.MejorPuntaje or 0
+			datos.Posicion = datos.Posicion or {x = 0, y = 0, z = 0}
+			db:SetAsync(player.UserId, datos)
 
 			datos[campo] = valor
 			db:SetAsync(player.UserId, datos)

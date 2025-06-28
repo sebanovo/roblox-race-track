@@ -182,7 +182,7 @@ function configurarCheckpoints(folder)
 	end
 end
 
-local MAX_JUGADORES = 1
+local MAX_JUGADORES = 2
 local jugadoresListos = 0
 
 function iniciarJugador(jugador)
