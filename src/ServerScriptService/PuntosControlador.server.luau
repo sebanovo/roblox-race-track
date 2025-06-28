@@ -99,12 +99,19 @@ function playerAdded(player: Player)
 	puntos.Name = "Puntos"
 	puntos.Parent = leaderStats
 
+
+	local mejorPuntaje = Instance.new("IntValue")
+	mejorPuntaje.Name = "MejorPuntaje"
+	mejorPuntaje.Parent = leaderStats
+
 	actualizarCampo(player, 'Puntos', 0)
 
 	puntos.Value = 0
 	tareaGuardarPosicion(player)
 	local datos = getDataPlayer(player)
 	mejoresPuntajes[player.UserId] = datos["MejorPuntaje"]
+
+	mejorPuntaje.Value = datos["MejorPuntaje"]
 end
 
 function playerRemoving(player)
