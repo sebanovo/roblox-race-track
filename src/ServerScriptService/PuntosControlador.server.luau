@@ -4,8 +4,6 @@ local db = DataStoreService:GetDataStore("data")
 
 local TOTAL_MAX_INTENTOS = 10
 local posicionesRecientes = {}
-
-
 local mejoresPuntajes = {}
 
 function tareaGuardarPosicion(player: Player)
@@ -22,7 +20,6 @@ function tareaGuardarPosicion(player: Player)
 		end
 	end)
 end
-
 
 function getDataPlayer(player: Player)
 	local success, data
@@ -115,27 +112,6 @@ function playerAdded(player: Player)
 	mejoresPuntajes[player.UserId] = datos["MejorPuntaje"]
 end
 
-
--- function getDataPlayer(player: Player)
--- 	local succes, data = nil, nil
--- 	local intento = 0
-
--- 	while not succes do
--- 		if intento >= TOTAL_MAX_INTENTOS then
--- 			error("No se pudo obtener los datos del jugador")
--- 		end
--- 		succes, data = pcall(db.GetAsync, db, player.UserId)
-
--- 		if succes then
--- 			return data
--- 		else
--- 			warn("Fallo obtener dato intento: ", intento)
--- 			intento += 1
--- 			task.wait(2)
--- 		end
--- 	end
--- end
-
 function playerRemoving(player)
 	local leaderStats = player:FindFirstChild("leaderstats")
 	local puntos = leaderStats:FindFirstChild("Puntos")
@@ -143,7 +119,6 @@ function playerRemoving(player)
 	local succes = nil
 	local intento = 0
 
-	-- print("Informacion: ", getDataPlayer(player))
 	local mejorPuntaje = mejoresPuntajes[player.UserId]
 	if mejorPuntaje < puntos.Value then
 		mejorPuntaje = puntos.Value
