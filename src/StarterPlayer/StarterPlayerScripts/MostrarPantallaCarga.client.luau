@@ -12,6 +12,7 @@ texto.BackgroundColor3 = Color3.new(0, 0, 0)
 texto.TextColor3 = Color3.new(1, 1, 1)
 texto.TextScaled = true
 texto.Text = "Cargando nivel..."
+texto.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 texto.Parent = loadingGui
 
 evento.OnClientEvent:Connect(function(mostrar)
