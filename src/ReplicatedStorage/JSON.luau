@@ -4,6 +4,7 @@ local JSON = [[
     {
       "id": 1,
       "nombre": "Nivel 1",
+      "estaCargado": false,
       "descripcion": null,
       "jugador": {
         "posicion": {
@@ -38,6 +39,7 @@ local JSON = [[
     {
       "id": 2,
       "nombre": "Nivel 2",
+      "estaCargado": false,
       "descripcion": null,
       "jugador": {
         "posicion": {
@@ -77,6 +79,7 @@ local JSON = [[
     {
       "id": 3,
       "nombre": "Nivel 3",
+      "estaCargado": false,
       "descripcion": null,
       "jugador": {
         "posicion": {

@@ -82,6 +82,7 @@ function configurarCheckpoints(folder)
 							-- Configurar propiedades físicas
 							checkpoint.CanCollide = false
 							checkpoint.Anchored = true
+							checkpoint.Transparency = 1
 
 							-- Conectar evento Touched
 							checkpoint.Touched:Connect(function(hit)
@@ -113,31 +114,43 @@ function configurarCheckpoints(folder)
 												progreso.checkpointEsperado = 1
 												local nuevaPista = ordenPistas[progreso.pistaActualIndex]
 
-												desmontarJugador(jugador)	
+												desmontarJugador(jugador)
 												if nuevaPista then
 													if nuevaPista == "PistaCuadrado" then
+														local n = 1
 														evento:FireClient(jugador, true)
-														cargarNivel("Nivel 1")
+														if not niveles[n].estaCargado then
+															cargarNivel(niveles[n].nombre)
+														end
+														niveles[n].estaCargado = true
 														task.wait(3)
-														cambiarPosicion(jugador, niveles[1].jugador.posicion)
+														cambiarPosicion(jugador, niveles[n].jugador.posicion)
 														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
 														configurarCheckpoints("Nivel 1")
 													elseif nuevaPista == "PistaCirculo" then
+														local n = 2
 														evento:FireClient(jugador, true)
-														cargarNivel("Nivel 2")
+														if not niveles[n].estaCargado then
+															cargarNivel(niveles[n].nombre)
+														end
+														niveles[n].estaCargado = true
 														task.wait(3)
-														cambiarPosicion(jugador, niveles[2].jugador.posicion)
+														cambiarPosicion(jugador, niveles[n].jugador.posicion)
 														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
 														configurarCheckpoints("Nivel 2")
 													elseif nuevaPista == "Pista8" then
+														local n = 3
 														evento:FireClient(jugador, true)
-														cargarNivel("Nivel 3")
+														if not niveles[n].estaCargado then
+															cargarNivel(niveles[n].nombre)
+														end
+														niveles[n].estaCargado = true
 														task.wait(3)
-														cambiarPosicion(jugador, niveles[3].jugador.posicion)
+														cambiarPosicion(jugador, niveles[n].jugador.posicion)
 														evento:FireClient(jugador, false)
 														progresoJugadores[jugador.UserId].checkpointEsperado = 1
 														print("¡Felicidades! "..jugador.Name.." ha completado la pista "..pista.Name.." y avanzó a la pista "..nuevaPista)
@@ -183,12 +196,12 @@ function iniciarJugador(jugador)
 		print("Todos los jugadores están listos. Iniciando juego.")
 		evento:FireClient(jugador, true)
 		task.wait(3)
-		cargarNivel("Nivel 1")
+		cargarNivel(niveles[1].nombre)
 		for _, player in ipairs(Players:GetPlayers()) do
 			cambiarPosicion(player, niveles[1].jugador.posicion)
 		end
 		evento:FireClient(jugador, false)
-		configurarCheckpoints("Nivel 1")
+		configurarCheckpoints(niveles[1].nombre)
 	end
 end
 
